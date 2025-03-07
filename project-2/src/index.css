@@ -1,0 +1,82 @@
+:root {
+  background: rgb(240, 234, 214);
+}
+
+h1, h3 {
+  color: rgb(45, 45, 45);
+  text-align: center;
+  font-family: "Lucida Console", monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashcard {
+  border-radius: 2px;
+  width: 600px;
+  height: 360px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.buttons {
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+}
+
+button {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border: none;
+  padding: 10px;
+}
+
+button:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.flashcard-front:hover, .flashcard-back:hover  {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.flashcard-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+
+.flipped .flashcard-inner {
+  transform: rotateX(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.flashcard-front {
+  background-color: whitesmoke;
+}
+
+.flashcard-back {
+  background-color: whitesmoke;
+  transform: rotateX(180deg);
+}
