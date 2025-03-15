@@ -24,6 +24,7 @@ h1, h3 {
   justify-content: center;
   align-items: center;
   perspective: 1000px;
+  padding: 10px;
 }
 
 .buttons {
@@ -32,10 +33,15 @@ h1, h3 {
   gap: 10px;
 }
 
-button {
+button{
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border: none;
   padding: 10px;
+  font-family: "Lucida Console", monospace;
+}
+
+.noMorePrev, .noMoreLast {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 button:active {
@@ -79,4 +85,27 @@ button:active {
 .flashcard-back {
   background-color: whitesmoke;
   transform: rotateX(180deg);
+}
+
+.form-container {
+  display: flex;
+  gap: 10px;
+  height: 30px;
+  align-items: center;
+}
+
+.form-container p {
+  font-family: "Lucida Console", monospace;
+}
+
+#correct {
+  background-color: rgb(136,231,136);
+}
+
+#wrong {
+  background-color: #FF474D;
+}
+
+#wrong-side {
+  background-color: #FFFFC5;
 }
